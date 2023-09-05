@@ -7,9 +7,13 @@
 Объяснение диаграммы:
 
 HDMIInterface - это интерфейс, представляющий стандартный интерфейс HDMI с методом connectHDMI().
+
 HDMIDevice - это класс HDMI-устройства, который реализует интерфейс HDMIInterface. У него есть метод connectHDMI().
+
 USBInterface - это интерфейс, представляющий стандартный интерфейс USB с методом connectUSB().
+
 USBDevice - это класс USB-устройства, который реализует интерфейс USBInterface. У него есть метод connectUSB().
+
 USBToHDMIAdapter - это адаптер, который реализует интерфейс HDMIInterface. Он содержит композиционную связь с USBInterface (usbDevice), который он адаптирует к интерфейсу HDMI. Метод connectHDMI() в адаптере преобразует вызов в connectUSB() USB-устройства и затем сообщает, что HDMI-устройство подключено через USB.
 
 
